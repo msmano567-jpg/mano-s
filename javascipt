@@ -1,0 +1,29 @@
+class ManufacturingMachine {
+
+    startMachine() {
+        console.log("Machine Started...");
+    }
+
+    stopMachine() {
+        console.log("Machine Stopped.");
+    }
+
+    runConveyor() {
+        console.log("Conveyor Running...");
+    }
+
+    activateCutter() {
+        console.log("Cutter Activated...");
+        console.log("Cutting Complete.");
+    }
+
+    runProcess() {
+        this.startMachine();
+        this.runConveyor();
+        this.activateCutter();
+        this.stopMachine();
+    }
+}
+
+const machine = new ManufacturingMachine();
+machine.runProcess();
