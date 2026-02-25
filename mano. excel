@@ -1,0 +1,23 @@
+Sub RunMachine()
+
+    MsgBox "Machine Started"
+
+    Call RunConveyor
+    Call ActivateCutter
+
+    MsgBox "Machine Stopped"
+
+End Sub
+
+
+Sub RunConveyor()
+    MsgBox "Conveyor Running..."
+    Application.Wait Now + TimeValue("00:00:02")
+End Sub
+
+
+Sub ActivateCutter()
+    MsgBox "Cutter Activated..."
+    Application.Wait Now + TimeValue("00:00:02")
+    MsgBox "Cutting Complete"
+End Sub
