@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func startMachine() {
+	fmt.Println("Machine Started...")
+}
+
+func runConveyor() {
+	fmt.Println("Conveyor Running...")
+	time.Sleep(2 * time.Second)
+}
+
+func activateCutter() {
+	fmt.Println("Cutter Activated...")
+	time.Sleep(2 * time.Second)
+	fmt.Println("Cutting Complete.")
+}
+
+func stopMachine() {
+	fmt.Println("Machine Stopped.")
+}
+
+func main() {
+	startMachine()
+	runConveyor()
+	activateCutter()
+	stopMachine()
+}
