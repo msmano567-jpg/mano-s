@@ -1,0 +1,9 @@
+MODULE MainModule
+PROC main()
+    TPWrite "Robot Started";
+    MoveJ pHome, v100, z10, tool0;
+    MoveL pPick, v50, z5, tool0;
+    MoveL pPlace, v50, z5, tool0;
+    TPWrite "Process Complete";
+ENDPROC
+ENDMODULE
