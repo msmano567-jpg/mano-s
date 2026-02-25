@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>   // for sleep()
+
+void spindle_on() {
+    printf("Spindle ON\n");
+}
+
+void spindle_off() {
+    printf("Spindle OFF\n");
+}
+
+void move_tool(double position) {
+    printf("Tool moving to position %.2f mm\n", position);
+}
+
+void cut_material(double depth) {
+    printf("Cutting with depth %.2f mm\n", depth);
+}
+
+int main() {
+    printf("Starting Automatic Lathe Machine...\n");
+
+    spindle_on();
+    sleep(1);
+
+    move_tool(10.0);
+    sleep(1);
+
+    cut_material(2.0);
+    sleep(1);
+
+    move_tool(20.0);
+    sleep(1);
+
+    spindle_off();
+
+    printf("Machining Completed.\n");
+
+    return 0;
+}
